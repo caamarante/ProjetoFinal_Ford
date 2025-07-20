@@ -1,0 +1,56 @@
+.container_game {
+  padding-top: 42px;
+  background: linear-gradient(180deg, #040404 0%, #050016 51%, #040404 100%);
+  height: 100vh !important;
+}
+
+.section_instrucoes {
+  margin-top: 42px;
+  max-height: 80%;
+  width: 90%;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+
+}
+
+.textos_paragrafo {
+  text-align: justify;
+}
+
+.botao_game {
+  margin-top: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: black;
+  background-color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 0 8px #05001688;
+
+  /* Transição suave */
+  transition:
+    font-size 0.3s ease,
+    font-weight 0.3s ease,
+    letter-spacing 0.3s ease,
+    color 0.3s ease,
+    background 0.4s ease,
+    box-shadow 0.4s ease,
+    text-shadow 0.4s ease;
+}
+
+.botao_game:hover {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: #00cfff;
+  background: linear-gradient(90deg, #050016 0%, #000011 100%);
+  box-shadow: 0 0 12px #00cfff55, 0 0 20px #00cfff33;
+  text-shadow: 0 0 10px #00cfff88;
+}

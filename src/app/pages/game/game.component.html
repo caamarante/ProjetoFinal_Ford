@@ -1,1 +1,24 @@
-<p>game works!</p>
+<app-nav-bar></app-nav-bar>
+<div class="container-fluid container_game d-flex justify-content-center align-content-center">
+  <div class="section_instrucoes ">
+    <div class="textos text-white m-5">
+      <h2>Como funciona:</h2>
+      <p class="textos_paragrafo fs-5">Bem-vindo ao desafio Ford!
+        Você começará respondendo um quiz sobre a história, curiosidades e inovações da Ford. Sua pontuação no quiz definirá quantas vidas você terá no nosso minigame exclusivo!
+      </p>
+      <h3>🏆 Conquiste Troféus</h3>
+      <p class="textos_paragrafo fs-5">
+        A cada acerto no quiz, você ganha uma vida extra. E mais: sua pontuação final garantirá um troféu especial:
+      </p>
+    </div>
+    <div class="cards_game d-flex justify-content-center gap-5">
+      <app-card-trofeu [imagem]="'assets/trofeu-bronze.png'" [trofeu]="'Bronze'" [legenda]="'Troféu de Bronze'" [pontuacao]="'0 a 100 pontos'"></app-card-trofeu>
+      <app-card-trofeu [imagem]="'assets/trofeu-prata.png'" [trofeu]="'Prata'" [legenda]="'Troféu de Prata'" [pontuacao]="'101 a 300 pontos'"></app-card-trofeu>
+      <app-card-trofeu [imagem]="'assets/trofeu-ouro.png'" [trofeu]="'Ouro'" [legenda]="'Troféu de Ouro'" [pontuacao]="'301+ pontos'"></app-card-trofeu>
+    </div>
+    <div class="w-100 d-flex justify-content-center mt-2 mb-5">
+      <button type="button" class="btn btn-light botao_game text-center">Começar o desafio 🚀</button>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
