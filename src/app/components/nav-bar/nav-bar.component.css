@@ -1,3 +1,7 @@
+.nav_bar {
+  z-index: 3;
+}
+
 .logo_ford {
     left: 0;
     margin-left: 5px;
