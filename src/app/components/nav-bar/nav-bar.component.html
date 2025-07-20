@@ -1,10 +1,14 @@
 <ul class="nav nav-underline bg-black d-flex justify-content-around position-fixed top-0 w-100 nav_bar" data-bs-theme="dark">
   <a class="position-absolute logo_ford" aria-current="page"  href="#" ><img src="assets/ford-logo.png" height="28" alt=""></a>
   <li class="nav-item">
-    <a class="nav-link text-white active" aria-current="page"  href="#" >Home</a>
+    <a class="nav-link text-white" routerLink="/home"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }" aria-current="page" >Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link text-white" href="#" >Game</a>
+    <a class="nav-link text-white"  routerLink="/game"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }" aria-current="page" >Game</a>
   </li>
   <li class="nav-item">
     <a class="nav-link text-white" href="#">
