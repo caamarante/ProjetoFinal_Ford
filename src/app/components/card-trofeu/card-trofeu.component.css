@@ -1,0 +1,8 @@
+.card_trofeu {
+  background-color: transparent;
+  color: white;
+}
+.card_trofeu:hover {
+  background-color: white;
+  color: black;
+}
