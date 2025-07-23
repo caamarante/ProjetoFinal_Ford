@@ -1,7 +1,7 @@
 <app-nav-bar></app-nav-bar>
 <div class="container-fluid container_dashboard">
   <h2 class="text-white text-center">Bem vindo(a), {{nome}}</h2>
-  <div>
+  <div *ngIf="jaJogou">
     <h3 class="text-white text-center">Cards da sua ultima corrida:</h3>
     <div class="d-flex gap-3 justify-content-center">
       <app-card-trofeu imagem="{{imagemTrofeu}}" trofeu="{{nomeTrofeu}}"></app-card-trofeu>
