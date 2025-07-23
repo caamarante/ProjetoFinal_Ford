@@ -4,6 +4,7 @@ import { FooterComponent } from "../../components/footer/footer.component";
 import { Router } from '@angular/router';
 import { CardTrofeuComponent } from "../../components/card-trofeu/card-trofeu.component";
 import { CardCarrosComponent } from "../../components/card-carros/card-carros.component";
+import { CommonModule } from '@angular/common';
 
 interface Carro {
   id: string;
@@ -14,7 +15,7 @@ interface Carro {
 
 @Component({
   selector: 'app-dashboard',
-  imports: [NavBarComponent, FooterComponent, CardTrofeuComponent, CardCarrosComponent],
+  imports: [NavBarComponent, FooterComponent, CardTrofeuComponent, CardCarrosComponent, CommonModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
@@ -25,6 +26,7 @@ export class DashboardComponent implements OnInit {
   carroEscolhidoObj: Carro | null = null;
   @Input() imagemTrofeu: string = ""
   @Input() nomeTrofeu: string = ""
+  jaJogou:boolean = false;
 
   constructor(private router: Router) { }
 
@@ -35,6 +37,9 @@ export class DashboardComponent implements OnInit {
     const carroEscolhidoString = localStorage.getItem('carroEscolhido');
     if (carroEscolhidoString) {
       this.carroEscolhidoObj = JSON.parse(carroEscolhidoString);
+      this.jaJogou = true;
+    } else {
+      this.jaJogou = false;
     }
     if(this.pontuacao > 300 ){
       this.imagemTrofeu = 'assets/trofeu-ouro.png'
@@ -50,7 +55,7 @@ export class DashboardComponent implements OnInit {
   }
 
   onLogout(): void {
-    localStorage.clear();
+    localStorage.removeItem("isAuthenticated");
     this.router.navigate(['/login']);
   }
 }
