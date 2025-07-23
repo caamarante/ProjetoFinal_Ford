@@ -1,0 +1,29 @@
+.container_selectGame {
+  background: linear-gradient(180deg, #040404 0%, #050016 51%, #040404 100%);
+  padding-top: 42px;
+  height: 100vh;
+}
+
+.section_carros {
+  margin-top: 42px;
+  max-height: 70%;
+  width: 90%;
+  overflow-y: auto;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+.section_carros::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+.section_carros::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.section_carros::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  border: 1px solid transparent;
+}

@@ -1,0 +1,116 @@
+<app-nav-bar></app-nav-bar>
+<div class="container-fluid container_selectGame">
+  <h2 class="text-center text-white mt-2 text_game">Selecione seu veículo</h2>
+  <div class="section_carros d-flex justify-content-center m-auto">
+    <div class="d-flex flex-wrap gap-4 justify-content-center pt-2 pb-2">
+      <app-card-carros
+        [imagem]="'assets/bronco_sport.png'"
+        [legenda]="'Carro Bronco Ford'"
+        [carro]="'Bronco Sport®'"
+        [descricao]="'•Motor 2.0L EcoBoost®\n
+        •Potência 253 CV\n
+        •Transmissão automática de 8 velocidades'"
+        [id]="'carro1'"
+        (carroSelecionado)="selecionarCarro($event)">
+      </app-card-carros>
+      <app-card-carros
+        [imagem]="'assets/f-150.png'"
+        [legenda]="'Carro F-150 Ford'"
+        [carro]="'F-150 Lariat Black'"
+        [descricao]="'•Sync® 4 com Tela Multifuncional de 12'"
+        [id]="'carro2'"
+        (carroSelecionado)="selecionarCarro($event)">
+      </app-card-carros>
+      <app-card-carros
+        [imagem]="'assets/maverick.png'"
+        [legenda]="'Carro Maverick Ford'"
+        [carro]="'Maverick'"
+        [descricao]="'•Motor EcoBoost® 2.0L - 253cv / 380Nm \n
+          •Espaço interno surpreendente \n
+          •Caçamba inteligente'"
+        [id]="'carro3'"
+        (carroSelecionado)="selecionarCarro($event)">
+      </app-card-carros>
+      <app-card-carros
+        [imagem]="'assets/mustang_gt.png'"
+        [legenda]="'Carro Mustang GT Ford'"
+        [carro]="'Mustang GT'"
+        [descricao]="'•Suspensão	adaptativa Magneride® \n
+          •Freios de Alta Performance Brembo \n
+          •Drift Brake	Freio de estacionamento de alta performance'"
+        [id]="'carro4'"
+        (carroSelecionado)="selecionarCarro($event)">
+      </app-card-carros>
+      <app-card-carros
+        [imagem]="'assets/mustang_mach-e.png'"
+        [legenda]="'Carro Mustang Mach-E Ford'"
+        [carro]="'Mustang Mach-E'"
+        [descricao]="'•Tração integral eAWD \n
+          •Suspensão Adaptativa MagneRide® \n
+          •Freios de Alta Performance BREMBO®\n
+          •Sync 4 com tela de 15,5'"
+        [id]="'carro5'"
+        (carroSelecionado)="selecionarCarro($event)">
+      </app-card-carros>
+      <app-card-carros
+        [imagem]="'assets/ranger_black.png'"
+        [legenda]="'Carro Ranger Black Ford'"
+        [carro]="'Ranger Black 2.0L 4x2 AT Diesel 2026'"
+        [descricao]="'•Motor 2.0 Potência 170cv \n
+          •Design que impressiona \n
+          •Interior exclusivo Black \n
+          •Multimedia Sync 4 com tela de 10'"
+        [id]="'carro6'"
+        (carroSelecionado)="selecionarCarro($event)">
+      </app-card-carros>
+      <app-card-carros
+        [imagem]="'assets/ranger_raptor.png'"
+        [legenda]="'Carro Ranger Raptor Ford'"
+        [carro]="'Ranger Raptor 3.0 V6 Bi-turbo 4WD AT 2025 (AOD5)'"
+        [descricao]="'•Amortecedores FOX Racing \n
+          •Transmissão de 10 velocidades \n
+          •Painel Full Digital de 12,4'"
+        [id]="'carro7'"
+        (carroSelecionado)="selecionarCarro($event)">
+      </app-card-carros>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="position-absolute" *ngIf="carroEscolhido" >
+      <h6 class="text_game text-white">Selecionado: {{ carroEscolhido.nome }}</h6>
+    </div>
+    <button class="btn btn-outline-success botao_game mt-4 w-25" [disabled]="carroEscolhido === null" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Jogar</button>
+  </div>
+  <div class="modal fade bg-transparent" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered bg-transparent modal-xl">
+      <div class="modal-content bg-transparent">
+        <div class="modal-body">
+          <app-game-carro [carroEscolhido]="carroEscolhido" (jogoTerminou)="onJogoTerminou($event)"></app-game-carro>
+        </div>
+        <div *ngIf="jogoAcabou" class="modal-footer m-auto">
+          <button class="btn btn-primary botao_game" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Concluir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a type="button" class="btn-close" href="/home"></a>
+      </div>
+      <div class="modal-body">
+        Impressionante! Sua habilidade de superar obstáculos no jogo reflete o potencial que buscamos nos futuros talentos Front-end da Ford. Aqui, cada linha de código move o mundo e inova a experiência automotiva.
+        <br>
+        <br>
+        Quer fazer parte de um time inovador e deixar sua marca? Clique abaixo e venha acelerar sua carreira com a Ford!"
+      </div>
+      <div class="modal-footer text-center">
+        <a href="https://www.ford.com.br/sobre-a-ford/ford-enter/" class="text-center">Clique Aqui!</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<app-footer></app-footer>
