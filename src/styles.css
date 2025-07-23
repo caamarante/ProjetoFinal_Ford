@@ -1,2 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.text_game {
+  font-family: "Press Start 2P", system-ui;
+}
+
+.botao_game {
+  margin-top: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: black;
+  background-color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 0 8px #05001688;
+
+  transition:
+    font-size 0.3s ease,
+    font-weight 0.3s ease,
+    letter-spacing 0.3s ease,
+    color 0.3s ease,
+    background 0.4s ease,
+    box-shadow 0.4s ease,
+    text-shadow 0.4s ease;
+}
+
+.botao_game:hover {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: #00cfff;
+  background: linear-gradient(90deg, #050016 0%, #000011 100%);
+  box-shadow: 0 0 12px #00cfff55, 0 0 20px #00cfff33;
+  text-shadow: 0 0 10px #00cfff88;
+}
+
