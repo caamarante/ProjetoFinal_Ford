@@ -21,7 +21,7 @@ interface Carro {
 
 export class DashboardComponent implements OnInit {
   nome = localStorage.getItem('Nome');
-  pontuacao = Number(localStorage.getItem('potuacao'));
+  pontuacao = Number(localStorage.getItem('pontuacao'));
   carroEscolhidoObj: Carro | null = null;
   @Input() imagemTrofeu: string = ""
   @Input() nomeTrofeu: string = ""
@@ -36,15 +36,15 @@ export class DashboardComponent implements OnInit {
     if (carroEscolhidoString) {
       this.carroEscolhidoObj = JSON.parse(carroEscolhidoString);
     }
-    if(this.pontuacao <= 100 ){
-      this.imagemTrofeu = 'assets/trofeu-bronze.png'
-      this.nomeTrofeu = "Trófeu de Bronze"
+    if(this.pontuacao > 300 ){
+      this.imagemTrofeu = 'assets/trofeu-ouro.png'
+      this.nomeTrofeu = "Trófeu de Ouro"
     } else if (this.pontuacao > 100 && this.pontuacao <= 300){
       this.imagemTrofeu = 'assets/trofeu-prata.png'
       this.nomeTrofeu = "Trófeu de Prata"
     } else {
-      this.imagemTrofeu = 'assets/trofeu-ouro.png'
-      this.nomeTrofeu = "Trófeu de Ouro"
+      this.imagemTrofeu = 'assets/trofeu-bronze.png'
+      this.nomeTrofeu = "Trófeu de Bronze"
     }
 
   }
