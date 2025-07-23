@@ -29,7 +29,7 @@ export class GameCarroComponent implements AfterViewInit, OnChanges {
   private carroWidth = 100;
   private carroHeight = 60;
   private coneImg = new Image();
-  private coneX = 780;
+  private coneX = 750;
   private coneY = 170;
   private coneWidth = 30;
   private coneHeight = 50;
