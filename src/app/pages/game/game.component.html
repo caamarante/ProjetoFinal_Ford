@@ -11,13 +11,32 @@
         A cada acerto no quiz, você ganha uma vida extra. E mais: sua pontuação final garantirá um troféu especial:
       </p>
     </div>
-    <div class="cards_game d-flex justify-content-center gap-5">
+    <div class="cards_game d-flex flex-wrap justify-content-center gap-5">
       <app-card-trofeu [imagem]="'assets/trofeu-bronze.png'" [trofeu]="'Bronze'" [legenda]="'Troféu de Bronze'" [pontuacao]="'0 a 100 pontos'"></app-card-trofeu>
       <app-card-trofeu [imagem]="'assets/trofeu-prata.png'" [trofeu]="'Prata'" [legenda]="'Troféu de Prata'" [pontuacao]="'101 a 300 pontos'"></app-card-trofeu>
       <app-card-trofeu [imagem]="'assets/trofeu-ouro.png'" [trofeu]="'Ouro'" [legenda]="'Troféu de Ouro'" [pontuacao]="'301+ pontos'"></app-card-trofeu>
     </div>
     <div class="w-100 d-flex justify-content-center mt-2 mb-5">
-      <button type="button" class="btn btn-light botao_game text-center">Começar o desafio 🚀</button>
+      <button type="button" class="btn btn-light botao_game text-center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Começar o desafio 🚀</button>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Faça login para colecionar cards e trófeus e salvar seu progresso</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div *ngIf="!loginFeito" class="modal-body">
+            <app-login-forms [redirectRoute]="'/quiz'"></app-login-forms>
+          </div>
+          <div *ngIf="loginFeito" class="modal-body">
+            <a type="button" class="btn btn-primary" href="/quiz">Continuar</a>
+          </div>
+          <div class="modal-footer" *ngIf="!loginFeito">
+            <a type="button" class="btn btn-outline-info" href="/quiz">Continuar sem login</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
