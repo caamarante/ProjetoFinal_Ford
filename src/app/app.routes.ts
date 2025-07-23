@@ -6,6 +6,7 @@ import { SelectGameComponent } from './pages/select-game/select-game.component';
 import { QuizComponent } from './pages/quiz/quiz.component';
 import { SelectGameAccessGuard } from './services/navigation-guard.service';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -15,5 +16,7 @@ export const routes: Routes = [
   { path: 'selectGame', component: SelectGameComponent, canActivate: [SelectGameAccessGuard]  },
   { path: 'quiz', component: QuizComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'notFound', component: NotFoundComponent },
+  { path: '**', component: NotFoundComponent }
 
 ];
