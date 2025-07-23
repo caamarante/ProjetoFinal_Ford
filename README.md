@@ -108,4 +108,4 @@ Contribuições são bem-vindas! Se você tiver sugestões, melhorias ou encontr
 
 ---
 
-Feito por Ana Amanarate
+Feito por Ana Amarante
