@@ -1,0 +1,15 @@
+<div class="game-container">
+  <div *ngIf="!jogoRodando" class="position-absolute m-auto">
+    <h5 class="text-white text-center text_game mt-2">Game Over! <br> Sua Pontuação foi: {{pontuacao}}</h5>
+    <div *ngIf="pontuacao <= 100" class="text-center">
+      <img src="assets/trofeu-bronze.png" width="50" alt="Troféu de Bronze">
+    </div>
+    <div *ngIf="pontuacao > 100 && pontuacao <= 300" class="text-center">
+      <img src="assets/trofeu-prata.png" width="50" alt="Troféu de Bronze">
+    </div>
+    <div *ngIf="pontuacao > 300" class="text-center">
+      <img src="assets/trofeu-ouro.png" width="50" alt="Troféu de Bronze">
+    </div>
+  </div>
+  <canvas #gameCanvas width="800" height="300"></canvas>
+</div>
