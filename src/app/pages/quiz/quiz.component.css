@@ -1,0 +1,13 @@
+.container_quiz {
+  background: url('../../../../public/assets/bg_login.png');
+  background-size: cover;
+  height: 100vh !important;
+}
+
+.section_quiz {
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
