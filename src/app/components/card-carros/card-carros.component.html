@@ -1,1 +1,10 @@
-<p>card-carros works!</p>
+<div class="card card_carro form-check" style="width: 18rem; height: 24rem;" (click)="selecionarCarro()">
+  <label for="{{id}}">
+    <img src="{{imagem}}" class="card-img-top" alt="{{legenda}}">
+    <div class="card-body">
+      <h5 class="card-title">{{carro}}</h5>
+      <p class="card-text">{{descricao}}</p>
+      <input type="form-check-input" type="radio" name="radioDefault" id="{{id}}">
+    </div>
+  </label>
+</div>
