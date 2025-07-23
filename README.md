@@ -56,7 +56,7 @@ Siga os passos abaixo para configurar e executar o projeto em sua máquina local
 Certifique-se de ter as seguintes ferramentas instaladas:
 
 * [Node.js](https://nodejs.org/en/) (versão LTS recomendada)
-* [Angular CLI](https://angular.io/cli) (instale via npm: `npm install -g @angular/cli@19.2.6`)
+* [Angular CLI](https://angular.io/cli) (instale via npm: `npm install -g @angular/cli@19.2.15`)
 
 ### Instalação
 
